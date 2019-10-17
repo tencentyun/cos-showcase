@@ -1,0 +1,15 @@
+<!--pages/proj/proj.wxml-->
+
+<view class="center_item" style="margin-top: 100rpx;font-size:1.2rem">小程序的开源地址</view>
+
+<view class="center_item"  style="margin-top: 100rpx;">长按下面的链接复制</view>
+
+<view class="center_item"  style="margin-top: 20rpx;">
+<text bindlongtap="copyLink">{{proj_uri}}</text>
+</view>
+
+
+<view class="center_item" style="margin-top: 100rpx;">
+<image class="qr" src="../../static/qr.png"></image>
+
+</view>

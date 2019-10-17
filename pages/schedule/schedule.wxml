@@ -1,0 +1,34 @@
+<!--pages/schedule/schedule.wxml-->
+
+<scroll-view style="height: 100%, width: 100%" scroll-y="true" >
+
+    <view class="header_day">{{day}}</view>
+
+    <view class="header_name">{{conf}}</view>
+
+    <view class="agenda {{index % 2 == 1 ? 'agenda_background': ''}}" bindtap="onViewAgenda" data-id ="{{item.id}}" 
+    wx:for="{{agenda}}" wx:key="{{item.id}}">
+
+      <text class="agenda_time">{{item.startTime}}</text>
+
+      <view class="agenda_info">
+        <text class="agenda_title">{{item.title}}</text>
+        <view class="agenda_speaker"> 
+          <image src="../../static/person.png"></image>
+          <text>{{item.speaker}}</text>
+        </view>
+        <view class="agenda_keyword"> 
+          <image></image>
+          <text>{{item.keywords}}</text>
+        </view>
+      </view>
+
+      <view class="agenda_forword">
+        <image src="../../static/forword.png"></image>
+      </view>
+
+    </view>
+
+    <view style="height: 50rpx"></view>
+
+</scroll-view>

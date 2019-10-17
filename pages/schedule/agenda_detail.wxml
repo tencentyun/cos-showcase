@@ -1,0 +1,31 @@
+<!--pages/schedule/agenda_detail.wxml-->
+
+<scroll-view scroll-y="true" style="height: 100%;width:100%">
+
+    <view class="header_day">{{agenda.title}}</view>
+
+    <view class="agenda_time_block text_padding"> 
+      <image src="../../static/schedule.png"></image>
+      <text>{{day + ",  " + agenda.startTime + " - " +  agenda.endTime}}</text>
+    </view>
+
+    <text class="agenda_summary summary_padding">{{agenda.summary}}</text>
+
+    <view class="agenda_keyword text_padding"> 
+      <image></image>
+      <text>{{agenda.keywords}}</text>
+    </view>
+
+    <text class="speaker_title">演讲人</text>
+
+    <view class="agenda_speaker"> 
+      <image src="../../static/speaker.png"></image>
+      <text>{{agenda.speaker}}</text>
+    </view>
+
+
+    <text class="agenda_summary summary_padding">{{agenda.speaker_intro}}</text>
+
+    <view style="height: 100rpx"></view>
+
+  </scroll-view>

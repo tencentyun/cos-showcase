@@ -11,8 +11,8 @@ Page({
    */
   data: {
     banners: [
-      '../../src/banner.jpg',
-      '../../src/banner1.jpg'
+      '../../static/banner.jpg',
+      '../../static/banner1.jpg'
      
     ],
     imageList: [

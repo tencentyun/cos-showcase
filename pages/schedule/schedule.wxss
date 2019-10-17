@@ -1,0 +1,128 @@
+/* pages/schedule/schedule.wxss */
+
+page {
+  color: #1b1b1b;
+}
+
+.header_day {
+  /* align-content: center;
+  text-align: center; */
+  padding-top: 40rpx;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 1.3rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header_name {
+  margin-bottom: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  font-size: 1.2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #002171;
+  color: #f5f5f5;
+}
+
+.agenda {
+  width: 100%;
+  padding: 16rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+  flex-flow: row;
+}
+
+.agenda_background {
+  background-color: #eeeeee;
+}
+
+.agenda_time {
+  width: 100rpx;
+  color: #0d47a1;
+  font-size: 1.5rem;
+  padding: 10rpx;
+}
+
+.agenda_info {
+  margin-left: 30rpx;
+}
+
+.agenda_title {
+  display: block;
+  font-size: 1rem;
+  padding: 10rpx;
+  margin-right: 50rpx;
+}
+
+.agenda_summary {
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 10rpx;
+  line-height: 1.8;
+}
+
+.agenda_speaker {
+  display: flex;
+  align-items:center;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 10rpx;
+}
+
+.agenda_speaker image {
+  padding-right: 8rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.agenda_speaker text {
+  height: 36rpx;
+}
+
+.agenda_keyword {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 200;
+  padding: 10rpx;
+}
+
+.agenda_keyword image{
+  background: #63a4ff;
+  margin-left: 3rpx;
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  margin-right: 11rpx;
+}
+
+.agenda_time_block {
+  display: flex;
+  align-items:center;
+  font-weight: 200;
+  padding: 10rpx;
+}
+
+.agenda_time_block image{
+  width: 36rpx;
+  height: 36rpx;
+  padding-right: 16rpx;
+}
+
+.agenda_forword {
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 180rpx;
+  padding-right: 8rpx;
+}
+
+.agenda_forword image {
+  width: 50rpx;
+  height: 50rpx;
+  top: 40%;
+  position: relative;
+}

@@ -1,0 +1,8 @@
+<!--pages/discussGroup/discuss_group.wxml-->
+<view class="center_item" style="margin-top: 100rpx; font-size:1.2rem">开发者交流群</view>
+
+<view class="center_item intro">欢迎加入我们的开发者交流群参与讨论，长按下面的QQ号复制</view>
+
+<view class="center_item" style="margin-top: 50rpx;">
+<text class="group_number" bindlongtap="copyLink">{{group}}</text>
+</view>

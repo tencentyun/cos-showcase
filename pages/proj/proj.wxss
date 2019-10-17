@@ -1,0 +1,11 @@
+/* pages/proj/proj.wxss */
+
+.center_item {
+  align-content: center;
+  text-align: center;
+}
+
+.qr {
+  width: 300rpx;
+  height: 300rpx;
+}

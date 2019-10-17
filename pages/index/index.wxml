@@ -9,7 +9,7 @@
 
   <text style="font-size:18px;line-height: 35px;margin-left:1.5%">照片墙</text>
   <view  class ="emptyFileView" id ="{{ShowMainView?'hide':'showFlex'}}" style="height:{{windowH-120-windowW*0.618+'px'}}">
-    <image src="../../src/empty.png" style="width:{{windowW*0.618/3*2.0+'px'}};height:{{103/180*(windowW*0.618/3*2.0)+'px'}}"></image>
+    <image src="../../static/empty.png" style="width:{{windowW*0.618/3*2.0+'px'}};height:{{103/180*(windowW*0.618/3*2.0)+'px'}}"></image>
     <text>点击 ➕ 按钮\n上传您的第一张照片吧~</text>
   </view> 
     
@@ -19,7 +19,7 @@
         <image  class="photo"   data-index ="{{index}}" src="{{item.ImgUrl}} " bindtap="onHandleShowImageDetailEvent" mode="widthFix" data-url =  '{{ item.ImgUrl}}' ></image> 
         <view class="opreationView">
           <text class="lastModifyText">{{item.Date}}</text>
-          <image class = "operationButton" data-index ="{{index}}" src="../../src/more.png"  bindtap="onHandleShowOperationView"></image>
+          <image class = "operationButton" data-index ="{{index}}" src="../../static/more.png"  bindtap="onHandleShowOperationView"></image>
         </view>
       </view>
     </view>
@@ -30,13 +30,13 @@
         </image> 
         <view class="opreationView">
           <text class="lastModifyText" >{{item.Date}}</text>
-          <image class = "operationButton" data-index ="{{index}}" src="../../src/more.png"  bindtap="onHandleShowOperationView"></image>
+          <image class = "operationButton" data-index ="{{index}}" src="../../static/more.png"  bindtap="onHandleShowOperationView"></image>
         </view>
       </view>
     </view>
   </view>
 
-  <image class="uploadImageButton"  bindtap="onHandleUploadFileEvent" src="../../src/add.png"></image>
+  <image class="uploadImageButton"  bindtap="onHandleUploadFileEvent" src="../../static/add.png"></image>
 </view>
 
 <image class="imageDetail" id ="{{ShowImageDetail?'showBlock':'hide'}}" style = "height:{{windowH+'px'}};background:#E1E5F0"src="{{clickedImageUrl}}"  mode="aspectFit" bindtap="onHandleHideImageDetail"     ></image>

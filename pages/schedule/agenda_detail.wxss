@@ -1,0 +1,37 @@
+/* pages/schedule/agenda_detail.wxss */
+@import 'schedule.wxss';
+
+
+.text_padding {
+  padding: 10rpx;
+  padding-left: 30rpx;
+}
+
+.summary_padding {
+  padding: 10rpx;
+  padding-left: 30rpx;
+  padding-top: 40rpx;
+  padding-right: 30rpx;
+}
+
+.speaker_title {
+  display: block;
+  padding-left: 30rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.2rem;
+}
+
+.agenda_speaker {
+  font-size: 1.1rem;
+  padding: 10rpx;
+  padding-left: 30rpx;
+  font-weight: 350;
+}
+
+.agenda_speaker image {
+  padding-right: 30rpx;
+  width: 80rpx;
+  height: 80rpx;
+}

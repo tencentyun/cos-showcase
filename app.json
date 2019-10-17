@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/composeFile/composeFile",
-    "pages/watermerFile/watermerFile"
+    "pages/watermerFile/watermerFile",
+    "pages/schedule/schedule",
+    "pages/schedule/agenda_detail",
+    "pages/proj/proj",
+    "pages/discussGroup/discuss_group"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,10 +16,9 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "cloud":true,
+  "cloud": true,
   "navigateToMiniProgramAppIdList": [
     "wx3b953c2fddbd890a",
     "wxe2039b83454e49ed"
   ]
 }
-
