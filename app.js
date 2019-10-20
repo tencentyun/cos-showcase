@@ -1,7 +1,9 @@
 //app.js
-App({
-  onLaunch: function () {
 
+var util = require('utils/util.js');
+App({
+
+  onLaunch: function () {
     var that = this;
     wx.getSystemInfo({
       success: function (res) {
@@ -9,13 +11,15 @@ App({
           that.globalData.WINDOW_WIDTH = res.windowWidth
       },
     })
+   
   },
-
+  
   
   globalData: {
     userInfo: null,
     WINDOW_WIDTH:300,
-    WINDOW_HEIGHT:300
+    WINDOW_HEIGHT:300,
+    OPENID: "",
   }
   
 })

@@ -5,7 +5,7 @@ var Base64 = require('../../lib/base64.js').Base64;
 var util = require('../../utils/util.js');
 var cos = require('../../utils/util.js').getCOSInstance();
 
-
+var  app = getApp();
 
 var ctx =null;
 
@@ -60,7 +60,7 @@ Page({
     cos.headObject({
       Bucket: config.Bucket, /* 必须 */
       Region: config.Region,    /* 必须 */
-      Key: config.WatermerKey,
+      Key: app.globalData.OPENID+'/'+ config.WatermerKey,
     }, function (err, data) {
       util.hideLoading();
       if (err) {
@@ -81,14 +81,18 @@ Page({
    */
   handleDetectWatermer:function(){
     util.showLoading("检测盲水印...");
+    var ciWatermerHttpHost = config.CiWatermerHttpHost+app.globalData.OPENID+'/watermer/watermer.png';
+
     var that = this;
     that.setData({
       ShowWatermerView: false,
-      WatermarImgUrl: config.CosHost + config.WatermerKey
+      WatermarImgUrl: config.CosHost + app.globalData.OPENID+config.WatermerKey
 
     })
     var oringeFilekey = util.getUrlRelativePath(this.data.ImgUrl);
-    var rule = `{"rules":[{"fileid":"/FetchImage/extract-${oringeFilekey}","rule":"watermark/4/type/2/image/${Base64.encode(config.CiWatermerHttpHost)}"}]}`;
+    var fetchImage = '/' + app.globalData.OPENID + '/FetchImage/' + 'extract-' + oringeFilekey;
+
+    var rule = `{"rules":[{"fileid":"${fetchImage}","rule":"watermark/4/type/2/image/${Base64.encode(ciWatermerHttpHost)}"}]}`;
     this.fetchWatermerResult(rule,function(res){
       if (res.statusCode == 200) {
         var watermarkStatus = util.parseExtractBlindWatermarkResponse(res.data).ProcessResults.WatermarkStatus;
@@ -106,7 +110,7 @@ Page({
             ShowComposeView: true,
             ShowWatermerView: false,
             ShowFetchView: false,
-            WatermarImgUrl: config.CosHost + config.WatermerKey
+            WatermarImgUrl: config.CosHost + app.globalData.OPENID + '/'+config.WatermerKey
           })
         }
 
@@ -119,11 +123,12 @@ Page({
     util.showLoading("合成中");
     var that  =this;
     var oringeFilekey = util.getUrlRelativePath(this.data.ImgUrl);
-    var watermarkUrl = config.CiWatermerHttpHost;
+    var watermarkUrl = config.CiWatermerHttpHost + app.globalData.OPENID + '/watermer/watermer.png';
+
     var header = {};
     var result;
     //合成之后和源文件同名，覆盖原文件
-    var pathname = '/' + oringeFilekey;
+    var pathname = '/'+oringeFilekey;
     var operations = `{"rules":[{"fileid":"${oringeFilekey}","rule":"watermark/3/type/2/image/${Base64.encode(watermarkUrl)}"}]}`
     var url = config.CiV5Host + '/' + oringeFilekey + '?image_process';
     header['Pic-Operations'] = operations;
@@ -159,8 +164,12 @@ Page({
   onHandleFetchWatermarEvent:function(){
     util.showLoading("提取中...");
     var that = this;
+    var ciWatermerHttpHost = config.CiWatermerHttpHost + app.globalData.OPENID + '/watermer/watermer.png';
     var oringeFilekey = util.getUrlRelativePath(this.data.ImgUrl);
-    var rule = `{"rules":[{"fileid":"/FetchImage/extract-${oringeFilekey}","rule":"watermark/4/type/2/image/${Base64.encode(config.CiWatermerHttpHost)}"}]}`;
+    var fetchImage = '/' + app.globalData.OPENID + '/FetchImage/' + 'extract-' + oringeFilekey;
+
+    var rule = `{"rules":[{"fileid":"${fetchImage}","rule":"watermark/4/type/2/image/${Base64.encode(ciWatermerHttpHost)}"}]}`;
+   
     this.fetchWatermerResult(rule,function (res){
       var watermarkStatus = util.parseExtractBlindWatermarkResponse(res.data).ProcessResults.WatermarkStatus;
       //认为有盲水印
@@ -182,17 +191,17 @@ Page({
   fetchWatermerResult: function(rule,callback){
     var that = this;
     var oringeFilekey = util.getUrlRelativePath(this.data.ImgUrl);
-    var composeKey = '/' + oringeFilekey;
+    var composeKey = oringeFilekey;
     var header = {};
     var result; 
     var operations = rule;
 
 
-    var pathname = composeKey;
+    var pathname ='/'+composeKey;
     console.log(operations);
     header['Pic-Operations'] = operations;
     header['content-type'] = 'image/png';
-    var url = config.CiV5Host + composeKey + '?image_process';
+    var url = config.CiV5Host+'/'+ composeKey + '?image_process';
     util.getAuthorization({
       Method: 'POST', Pathname: pathname
     }, function (AuthData) {

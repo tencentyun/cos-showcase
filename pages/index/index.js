@@ -4,6 +4,7 @@ var util = require('../../utils/util.js');
 var cos = require('../../utils/util.js').getCOSInstance();
 var watermerKey = "watermer/watermer.png";
 var Base64 = require('../../lib/base64.js').Base64;
+var app = getApp();
 Page({
 
   /**
@@ -63,14 +64,14 @@ Page({
         filePath = res.tempFiles[0].path;
         //获取文件名
         filename = filePath.substr(filePath.lastIndexOf('/') + 1);
-        prefix = 'https://' + config.Bucket + '.cos.' + config.Region + '.myqcloud.com' + '/' + filename;
+      prefix = 'https://' + config.Bucket + '.cos.' + config.Region + '.myqcloud.com/' + app.globalData.OPENID+'/' + filename;
         return util.getImageInfo(filePath);
      
     }).then(res=>{
       cos.postObject({
         Bucket: config.Bucket,
         Region: config.Region,
-        Key: '/' + filename,
+        Key: app.globalData.OPENID+'/' + filename,
         FilePath: filePath,
       }, function (err, data) {
         util.hideLoading();
@@ -205,35 +206,40 @@ Page({
     wx.showNavigationBarLoading() //在标题栏中显示加载;
     var that = this;
     var imgs = [];
-    cos.getBucket({
-      Bucket: config.Bucket, /* 必须 */
-      Region: config.Region,    /* 必须 */
-      Delimiter: '/'
+    util.getOpenid().then(res=>{
+      app.globalData.OPENID = res;
+      cos.getBucket({
+        Bucket: config.Bucket, /* 必须 */
+        Region: config.Region,    /* 必须 */
+        Delimiter: '/',
+        Prefix: res+'/'
 
-    }, function (err, data) {
-      wx.hideNavigationBarLoading() //完成停止加载
-      wx.stopPullDownRefresh() //停止下拉刷新
-      let contents = data.Contents||[];
-      if(contents.length){
-        contents.forEach(function (item, index) {
-          var prefix = 'https://' + config.Bucket + '.cos.' + config.Region + '.myqcloud.com' + '/' + item.Key;
-          //日期格式转换
-          let time = util.timestampToString(item.LastModified, 'L');
-          var dic = { "ImgUrl": prefix, "Date": time };
-          imgs.push(dic)
-        });
-        that.setData({
-          imageList: imgs,
-          ShowMainView: true
+      }, function (err, data) {
+        wx.hideNavigationBarLoading() //完成停止加载
+        wx.stopPullDownRefresh() //停止下拉刷新
+        let contents = data.Contents || [];
+        if (contents.length) {
+          contents.forEach(function (item, index) {
+            var prefix = 'https://' + config.Bucket + '.cos.' + config.Region + '.myqcloud.com/'+ item.Key;
+            //日期格式转换
+            let time = util.timestampToString(item.LastModified, 'L');
+            var dic = { "ImgUrl": prefix, "Date": time };
+            imgs.push(dic)
+          });
+          that.setData({
+            imageList: imgs,
+            ShowMainView: true
 
-        });
-      }else{
-        that.setData({
-          ShowMainView: false
-        });
-      }
-      
-    });
+          });
+        } else {
+          that.setData({
+            ShowMainView: false
+          });
+        }
+
+      });
+    })
+   
   },
 
   onPullDownRefresh:function(){

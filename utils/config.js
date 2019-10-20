@@ -5,7 +5,7 @@ module.exports = {
     CiV4HttpHost: 'http://' + 'karisphotos-1253653367' + '.piccd.' + 'myqcloud.com/',
     CiV5Host: 'https://' + 'karisphotos-1253653367' + '.pic.' + 'ap-chengdu' + '.myqcloud.com',
     CosHost: 'https://' + 'karisphotos-1253653367' + '.cos.' + 'ap-chengdu' + '.myqcloud.com/',
-    CiWatermerHttpHost: 'http://' + 'karisphotos-1253653367' + '.piccd.' + 'myqcloud.com/watermer/watermer.png',
+    CiWatermerHttpHost: 'http://' + 'karisphotos-1253653367' + '.piccd.' + 'myqcloud.com/',
     CosWatermerHttpHost: 'https://' + 'karisphotos-1253653367' + '.cos.' + 'ap-chengdu' + 'myqcloud.com/watermer',
     WatermerKey: 'watermer/watermer.png'
 };

@@ -3,7 +3,9 @@ var config = require('../../utils/config.js');
 var util = require('../../utils/util.js');
 var cos = require('../../utils/util.js').getCOSInstance();
 var isButtonDown = false;
-var watermerKey = "watermer/watermer.png";
+
+var app=getApp();
+var watermerKey = "/watermer/watermer.png";
 Page({
 
   /**
@@ -54,7 +56,7 @@ Page({
         cos.postObject({
           Bucket: config.Bucket,
           Region: config.Region,
-          Key: watermerKey,
+          Key: app.globalData.OPENID+watermerKey,
           FilePath: filePath,
           CacheControl: "no-cache"
         }, function (err, data) {

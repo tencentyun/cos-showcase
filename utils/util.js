@@ -34,7 +34,22 @@ function getCOSInstance(){
   });
   return cos;
 }
-
+function getOpenid () {
+  var p = new Promise((resolve, reject) =>{
+    wx.cloud.callFunction({
+      name: "login",
+      data: {},
+      success: res => {
+        console.log("login openid 调用成功", res.result.openid)
+        resolve(res.result.openid);
+      },
+      fail: err => {
+        reject(err);
+      }
+    })
+  })
+ return p;
+}
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -359,6 +374,7 @@ module.exports = {
   timestampToString: timestampToString,
   canvasToTempFilePath: canvasToTempFilePath,
   downloadFile:downloadFile,
-  saveImageToPhotosAlbum: saveImageToPhotosAlbum
+  saveImageToPhotosAlbum: saveImageToPhotosAlbum,
+  getOpenid: getOpenid
 }
 
