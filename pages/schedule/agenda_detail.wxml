@@ -2,7 +2,7 @@
 
 <scroll-view scroll-y="true" style="height: 100%;width:100%">
 
-    <view class="header_day">{{agenda.title}}</view>
+    <view class="header_name agenda_name">{{agenda.title}}</view>
 
     <view class="agenda_time_block text_padding"> 
       <image src="../../static/schedule.png"></image>

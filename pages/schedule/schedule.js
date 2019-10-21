@@ -9,6 +9,7 @@ Page({
   data: {
     day: data.day,
     conf: data.conf,
+    location: data.location,
     agenda: data.agenda
   },
 

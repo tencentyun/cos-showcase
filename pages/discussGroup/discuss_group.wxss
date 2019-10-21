@@ -14,3 +14,8 @@
   margin-top: 100rpx;
   line-height: 2;
 }
+
+.qq {
+  width: 540rpx;
+  height: 740rpx;
+}

@@ -5,4 +5,9 @@
 
 <view class="center_item" style="margin-top: 50rpx;">
 <text class="group_number" bindlongtap="copyLink">{{group}}</text>
+
+<view class="center_item" style="margin-top: 50rpx;">
+<image class="qq" src="../../static/qq.jpg"></image>
+</view>
+
 </view>

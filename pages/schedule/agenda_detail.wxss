@@ -1,6 +1,12 @@
 /* pages/schedule/agenda_detail.wxss */
 @import 'schedule.wxss';
 
+.agenda_name {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
 
 .text_padding {
   padding: 10rpx;

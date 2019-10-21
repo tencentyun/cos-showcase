@@ -2,9 +2,18 @@
 
 <scroll-view style="height: 100%, width: 100%" scroll-y="true" >
 
-    <view class="header_day">{{day}}</view>
+    <view class="header">
 
-    <view class="header_name">{{conf}}</view>
+      <view class="header_name">{{conf}}</view>
+
+      <view class="header_day">
+        <image src="../../static/schedule.png"></image>
+        <text style="margin-right:40rpx">{{day}}</text>
+        <image src="../../static/location_black.png"></image>
+        <text>{{location}}</text>
+      </view>
+
+    </view>
 
     <view class="agenda {{index % 2 == 1 ? 'agenda_background': ''}}" bindtap="onViewAgenda" data-id ="{{item.id}}" 
     wx:for="{{agenda}}" wx:key="{{item.id}}">
@@ -29,6 +38,6 @@
 
     </view>
 
-    <view style="height: 50rpx"></view>
+    <view class="bottom_view"></view>
 
 </scroll-view>
