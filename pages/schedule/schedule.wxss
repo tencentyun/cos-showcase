@@ -6,7 +6,6 @@ page {
 
 .header {
   background-color: #e0e0e0;
-  font-family: 'Courier New', Courier, monospace;
   padding: 80rpx 30rpx 60rpx 30rpx;
 }
 
@@ -112,7 +111,6 @@ page {
 .agenda_time_block {
   display: flex;
   align-items:center;
-  font-weight: 200;
   padding: 10rpx;
 }
 
