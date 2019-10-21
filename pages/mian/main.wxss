@@ -1,0 +1,98 @@
+/* pages/mian/main.wxss */
+/**index.wxss**/
+ .contanier{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.bannerImage{
+  padding-top: 0px;
+  width: 100%;
+  height: 500rpx;
+}
+
+.bannerTitle{
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  color: white;
+  font: 18px;
+  text-align: center;
+  
+}
+.activity{
+
+  flex-direction:row;
+  display: flex;
+  margin-top: 60rpx;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 5px;
+  border-color: #bfbfbf;
+  border-width: 1px;
+  border-style: solid;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+.activity image{
+  width: 32px;
+  height: 32px;
+  
+
+}
+.activity text{
+ 
+ text-align: center;
+ height: 50px;
+ line-height: 18px;
+}
+.contentTip{
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  width: 100%;
+  height: 60px;
+  line-height: 18px;
+  padding-left: 30px;
+
+
+}
+.grid{
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+ 
+}
+.card{
+  width: 180px;
+  height: 100px;
+  margin:5px;
+}
+.card image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border-color: #bfbfbf;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.card text{
+position:absolute;
+text-align: center;
+
+left:0; right:0; top:0; bottom:0;
+margin:auto;
+width: 150px;
+height: 50px;
+color: white;
+
+}

@@ -1,0 +1,43 @@
+<view class="contanier">
+
+
+
+
+ <image class="bannerImage"  src="../../static/mainBanner.png" mode="scaleToFill" bindtap="onHandleOpenMiniEvent">
+ <text class="bannerTitle">
+ 腾讯云开发者大会\n分会场
+ </text>
+ </image> 
+
+
+<view class="activity">
+<image src="../../static/noticy.png" mode="scaleToFill" >
+</image>
+ <text >
+COS 专场特惠！新用户购买资源包特惠 
+ </text>
+  <text style="color:#d81e06; font-size:20px">
+ 1 
+ </text>
+  <text>
+元起
+ </text>
+ </view>
+ <text class="contentTip">
+
+ 开发者大会
+ </text>
+<view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
+  <view class="card"  wx:for='{{[titles[index], titles[index+1]]}}' wx:for-item='dataItem'>
+  
+  <image class='bannerImage' src="../../static/mainBanner.png" mode="scaleToFill" bindtap="onHandleOpenMiniEvent">
+
+  <text>
+  {{dataItem}}
+  </text>
+
+  </image>
+  </view>
+ </view>
+
+</view>
