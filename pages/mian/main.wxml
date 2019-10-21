@@ -16,7 +16,7 @@
  <text >
 COS 专场特惠！新用户购买资源包特惠 
  </text>
-  <text style="color:#d81e06; font-size:20px">
+  <text style="color:#d81e06; font-size:40rpx">
  1 
  </text>
   <text>
@@ -28,13 +28,15 @@ COS 专场特惠！新用户购买资源包特惠
  开发者大会
  </text>
 <view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
-  <view class="card"  wx:for='{{[titles[index], titles[index+1]]}}' wx:for-item='dataItem'>
+  <view class="card"  wx:for='{{[titles[index], titles[index+1]]}}'>
   
-  <image class='bannerImage' src="../../static/mainBanner.png" mode="scaleToFill" bindtap="onHandleOpenMiniEvent">
+  <image class='bannerImage' src="../../static/mainBanner.png" mode="scaleToFill"   data-url ="{{item.url}}" bindtap="handleClickEvent">
 
+  <view class="textView">
   <text>
-  {{dataItem}}
+  {{item.title}}
   </text>
+  </view>
 
   </image>
   </view>

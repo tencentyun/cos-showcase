@@ -5,7 +5,7 @@
     "pages/logs/logs",
     "pages/composeFile/composeFile",
     "pages/watermerFile/watermerFile",
-    
+    "pages/schedule/schedule",
     "pages/schedule/agenda_detail",
     "pages/proj/proj",
     "pages/discussGroup/discuss_group"

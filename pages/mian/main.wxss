@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
 }
 
 .bannerImage{
@@ -16,51 +16,48 @@
 
 .bannerTitle{
   position: absolute;
-  top: 50px;
+  top: 100rpx;
   left: 0px;
   right: 0px;
   color: white;
-  font: 18px;
+  font: 36rpx;
   text-align: center;
   
 }
 .activity{
-
   flex-direction:row;
   display: flex;
   margin-top: 60rpx;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  font-size: 15px;
+  height: 100rpx;
   border-radius: 5px;
   border-color: #bfbfbf;
   border-width: 1px;
   border-style: solid;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
 
 }
 .activity image{
-  width: 32px;
-  height: 32px;
-  
+  width: 64rpx;
+  height: 64rpx;
 
 }
 .activity text{
- 
+ font-size: 30rpx;
  text-align: center;
- height: 50px;
- line-height: 18px;
+ height: 100rpx;
+ line-height: 36rpx;
 }
 .contentTip{
-  font-size: 20px;
+  font-size: 40rpx;
   color: black;
   text-align: left;
   width: 100%;
-  height: 60px;
-  line-height: 18px;
-  padding-left: 30px;
+  height: 120rpx;
+  line-height: 36rpx;
+  padding-left: 60rpx;
 
 
 }
@@ -68,31 +65,41 @@
   display: flex;
   margin-top: 30px;
   justify-content: center;
- 
+  width: 100%;
+  height: 100%;
 }
 .card{
-  width: 180px;
-  height: 100px;
-  margin:5px;
+  width: 50%;
+  height: 200rpx;
+  margin:10rpx;
 }
 .card image{
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 40rpx;
   border-color: #bfbfbf;
   border-width: 1px;
   border-style: solid;
+
+
 }
 
-.card text{
+.textView{
 position:absolute;
-text-align: center;
+  
 
 left:0; right:0; top:0; bottom:0;
 margin:auto;
-width: 150px;
-height: 50px;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center; /* 水平居中 */
+align-items: center;     /*垂直居中*/
 color: white;
+
+}
+.textView text{
+
 
 }
