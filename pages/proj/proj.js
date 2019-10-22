@@ -70,7 +70,7 @@ Page({
 
   copyLink : function () {
     wx.setClipboardData({
-      data: this.data.proj_uri,
+      data: this.data.proj_uri_head + this.data.proj_uri_tail,
     })
   },
 
