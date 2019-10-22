@@ -53,13 +53,16 @@
 .contentTip{
   font-size: 40rpx;
   color: black;
-  text-align: left;
+  text-align: center;
   width: 100%;
-  height: 120rpx;
-  line-height: 36rpx;
-  padding-left: 60rpx;
 
-
+}
+.subTitleText{
+    font-size: 30rpx;
+  color: black;
+  text-align: center;
+  width: 100%;
+  height: 60px;
 }
 .grid{
   display: flex;
@@ -77,10 +80,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 40rpx;
-  border-color: #bfbfbf;
-  border-width: 1px;
-  border-style: solid;
+
 
 
 }
@@ -96,10 +96,14 @@ height: 100%;
 display: flex;
 justify-content: center; /* 水平居中 */
 align-items: center;     /*垂直居中*/
-color: white;
 
 }
-.textView text{
+.imageTitle{
+  vertical-align: center;
+  height: 0px;
+  line-height: 0px;
 
+  color:turquoise;
+  font-size: 40rpx;
 
 }

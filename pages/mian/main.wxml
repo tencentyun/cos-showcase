@@ -8,7 +8,10 @@
  腾讯云开发者大会\n分会场
  </text>
  </image> 
-
+<text class="contentTip" style="font-size:26px">
+ 存储体验中心
+ </text>
+ 
 
 <view class="activity">
 <image src="../../static/noticy.png" mode="scaleToFill" >
@@ -24,7 +27,6 @@ COS 专场特惠！新用户购买资源包特惠
  </text>
  </view>
  <text class="contentTip">
-
  开发者大会
  </text>
 <view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
@@ -33,7 +35,7 @@ COS 专场特惠！新用户购买资源包特惠
   <image class='bannerImage' src="../../static/mainBanner.png" mode="scaleToFill"   data-url ="{{item.url}}" bindtap="handleClickEvent">
 
   <view class="textView">
-  <text>
+  <text class="imageTitle">
   {{item.title}}
   </text>
   </view>
