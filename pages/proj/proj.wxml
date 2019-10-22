@@ -1,15 +1,22 @@
 <!--pages/proj/proj.wxml-->
 
-<view class="center_item" style="margin-top: 100rpx;font-size:1.2rem">小程序的开源地址</view>
+<view class="center_item header">扫码二维码，查看 DEMO 源码</view>
 
-<view class="center_item"  style="margin-top: 100rpx;">长按下面的链接复制</view>
-
-<view class="center_item"  style="margin-top: 20rpx;">
-<text bindlongtap="copyLink">{{proj_uri}}</text>
+<view class="center_item">
+<image class="qr" src="../../static/proj.png" bindtap="previewQRCode"></image>
 </view>
 
-
-<view class="center_item" style="margin-top: 100rpx;">
-<image class="qr" src="../../static/qr.png"></image>
+<view class="divider_container">
+<view class="line"></view>
+<text class="text_or">or</text>
+<view class="line"></view>
 
 </view>
+
+<view class="center_item copy_tip">长按复制下面的链接</view>
+
+<view class="center_item text_link">
+<text bindlongtap="copyLink">{{proj_uri_head}}\n{{proj_uri_tail}}</text>
+</view>
+
+<view class="bottom"></view>

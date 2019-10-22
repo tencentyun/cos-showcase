@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    group: '123123111123'
+    group: '377986805',
+    qr_uri: 'https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/miniprog/group.jpg'
   },
 
   /**
@@ -69,6 +70,13 @@ Page({
   copyLink: function () {
     wx.setClipboardData({
       data: this.data.group,
+    })
+  },
+
+  previewQRCode: function (e) {
+    wx.previewImage({
+      current: this.data.qr_uri,
+      urls: [this.data.qr_uri]
     })
   }
 })

@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    proj_uri: 'https://github.com/tencentyun/cos-showcase'
+    proj_uri_head: 'https://github.com/tencentyun/',
+    proj_uri_tail: 'cos-showcase',
+    qr_uri: 'https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/miniprog/proj.png'
   },
 
   /**
@@ -13,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '小程序开源地址',
+      title: 'DEMO 源码地址',
     })
   },
 
@@ -69,6 +71,13 @@ Page({
   copyLink : function () {
     wx.setClipboardData({
       data: this.data.proj_uri,
+    })
+  },
+
+  previewQRCode: function(e) {
+    wx.previewImage({
+      current: this.data.qr_uri,
+      urls: [this.data.qr_uri]
     })
   }
 })

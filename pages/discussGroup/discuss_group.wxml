@@ -1,13 +1,21 @@
 <!--pages/discussGroup/discuss_group.wxml-->
-<view class="center_item" style="margin-top: 100rpx; font-size:1.2rem">开发者交流群</view>
+<view class="center_item header">扫码二维码，加入群聊</view>
 
-<view class="center_item intro">欢迎加入我们的开发者交流群参与讨论，长按下面的QQ号复制</view>
-
-<view class="center_item" style="margin-top: 50rpx;">
-<text class="group_number" bindlongtap="copyLink">{{group}}</text>
-
-<view class="center_item" style="margin-top: 50rpx;">
-<image class="qq" src="../../static/qq.jpg"></image>
+<view class="center_item">
+<image class="qq" src="../../static/qq.jpg" bindtap="previewQRCode"></image>
 </view>
 
+<view class="divider_container">
+<view class="line"></view>
+<text class="text_or">or</text>
+<view class="line"></view>
+
 </view>
+
+<view class="center_item copy_tip">长按复制下面的QQ号加入</view>
+
+<view class="center_item text_link">
+<text bindlongtap="copyLink">{{group}}</text>
+</view>
+
+<view class="bottom"></view>

@@ -2,19 +2,6 @@
 
 @import '../proj/proj.wxss';
 
-.group_number {
-  font-size: 1.2rem;
-  color: #01579b;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.intro {
-  padding-left: 30rpx; 
-  padding-right: 30rpx;
-  margin-top: 100rpx;
-  line-height: 2;
-}
-
 .qq {
   width: 540rpx;
   height: 740rpx;
