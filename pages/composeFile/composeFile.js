@@ -63,6 +63,7 @@ Page({
       Key: app.globalData.OPENID+'/'+ config.WatermerKey,
     }, function (err, data) {
       util.hideLoading();
+
       if (err) {
         that.setData({
           ShowComposeView:true,
@@ -86,24 +87,27 @@ Page({
     var that = this;
     that.setData({
       ShowWatermerView: false,
-      WatermarImgUrl: config.CosHost + app.globalData.OPENID+config.WatermerKey
+      WatermarImgUrl: config.CosHost + app.globalData.OPENID+'/'+config.WatermerKey
 
     })
     var oringeFilekey = util.getUrlRelativePath(this.data.ImgUrl);
-    var fetchImage = '/' + app.globalData.OPENID + '/FetchImage/' + 'extract-' + oringeFilekey;
+    var saveKey = oringeFilekey.substr(oringeFilekey.lastIndexOf('/') + 1);
+    var fetchImage = '/' + app.globalData.OPENID + '/FetchImage/' + 'extract-' + saveKey;
 
     var rule = `{"rules":[{"fileid":"${fetchImage}","rule":"watermark/4/type/2/image/${Base64.encode(ciWatermerHttpHost)}"}]}`;
     this.fetchWatermerResult(rule,function(res){
       if (res.statusCode == 200) {
         var watermarkStatus = util.parseExtractBlindWatermarkResponse(res.data).ProcessResults.WatermarkStatus;
+        var result = 'https://' + util.parseExtractBlindWatermarkResponse(res.data).ProcessResults.Location;
         //认为有盲水印
         if (watermarkStatus > 80) {
+          
           that.setData({
             ShowComposeView: false,
             ShowWatermerView: false,
             ShowFetchView: true,
-
-            ComposeImageURL: that.data.ImgUrl
+            ComposeImageURL: that.data.ImgUrl,
+            FetchWatermerURL: result,
           })
         } else {
           that.setData({
@@ -129,7 +133,8 @@ Page({
     var result;
     //合成之后和源文件同名，覆盖原文件
     var pathname = '/'+oringeFilekey;
-    var operations = `{"rules":[{"fileid":"${oringeFilekey}","rule":"watermark/3/type/2/image/${Base64.encode(watermarkUrl)}"}]}`
+    var saveKey = oringeFilekey.substr(oringeFilekey.lastIndexOf('/')+1);
+    var operations = `{"rules":[{"fileid":"${saveKey}","rule":"watermark/3/type/2/image/${Base64.encode(watermarkUrl)}"}]}`
     var url = config.CiV5Host + '/' + oringeFilekey + '?image_process';
     header['Pic-Operations'] = operations;
     header['content-type'] ='image/png';
