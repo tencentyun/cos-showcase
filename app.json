@@ -8,7 +8,8 @@
     "pages/schedule/schedule",
     "pages/schedule/agenda_detail",
     "pages/proj/proj",
-    "pages/discussGroup/discuss_group"
+    "pages/discussGroup/discuss_group",
+    "pages/sell/sell"
   ],
   "window": {
     "backgroundTextStyle": "light",

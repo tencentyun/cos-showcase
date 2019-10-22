@@ -1,0 +1,4 @@
+<!--pages/sell/sell.wxml-->
+<web-view  src="https://cloud.tencent.com/act/pro/cos">
+
+</web-view>

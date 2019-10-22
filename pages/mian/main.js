@@ -38,8 +38,11 @@ Page({
      url: url
    })
 
-
-
+  },
+  openActivityPage: function (e){
+    wx.navigateTo({
+      url: "/pages/sell/sell"
+    })
   }
   
  

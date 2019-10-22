@@ -21,7 +21,7 @@
  </view>
  <image src="../../static/line.svg" style="height:5px" mode="scaleToFill" ></image>
 
-<image class="activity"  style="width:{{windowW-24+'px'}}" src="../../static/广告-bg.png" mode="scaleToFill">
+<image class="activity"  style="width:{{windowW-24+'px'}}" src="../../static/广告-bg.png" mode="scaleToFill" bindtap="openActivityPage">
 <view  class="activity-content">
 <image src="../../static/icon-ads.svg" mode="scaleToFill" >
 </image>
