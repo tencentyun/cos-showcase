@@ -1,17 +1,24 @@
 /* pages/mian/main.wxss */
 /**index.wxss**/
- .contanier{
+.content{
+
+}
+.content-bg{
+   position: fixed;
+}
+.contanier{
+  position: absolute;
+  top: 0px;
+  left: 5rpx;
+  right: 5rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 10rpx;
-  padding-right: 10rpx;
-}
 
+ } 
 .bannerImage{
-  padding-top: 0px;
-  width: 100%;
-  height: 500rpx;
+  padding-top: 60rpx;
+
 }
 
 .bannerTitle{
@@ -25,56 +32,67 @@
   
 }
 .activity{
+  margin-top: 60rpx;
+  position: relative;
+  height: 100rpx;
+  
+
+}
+.activity-content{
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ bottom: 0px;
+ right: 0px;
+ height: 100rpx;
   flex-direction:row;
   display: flex;
-  margin-top: 60rpx;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  height: 100rpx;
-  border-radius: 5px;
-  border-color: #bfbfbf;
-  border-width: 1px;
-  border-style: solid;
-  padding-left: 10rpx;
-  padding-right: 10rpx;
+}
+.activity-content image{ 
+  width: 50rpx;
+  height: 50rpx;
 
 }
-.activity image{
-  width: 64rpx;
-  height: 64rpx;
-
-}
-.activity text{
+.activity-content text{
  font-size: 30rpx;
  text-align: center;
  height: 100rpx;
+ margin-left: 15rpx;
  line-height: 36rpx;
 }
 .contentTip{
-  font-size: 40rpx;
-  color: black;
+  color: white;
   text-align: center;
   width: 100%;
+  font-family: "MicrosoftYaHei-Bold";
 
 }
 .subTitleText{
-    font-size: 30rpx;
-  color: black;
+  font-size: 30rpx;
+  color: #00F3FD ;
   text-align: center;
   width: 100%;
-  height: 60px;
+  height: 80rpx;
+  font-family: "SFUIText-Medium";
+}
+
+.grids{
+width: 100%;
+  margin-bottom: 100rpx;
 }
 .grid{
   display: flex;
-  margin-top: 30px;
+  margin-top: 5px;
   justify-content: center;
   width: 100%;
-  height: 100%;
+
 }
 .card{
   width: 50%;
-  height: 200rpx;
-  margin:10rpx;
+  margin:12px;
+ 
 }
 .card image{
   position: relative;
@@ -84,11 +102,8 @@
 
 
 }
-
 .textView{
 position:absolute;
-  
-
 left:0; right:0; top:0; bottom:0;
 margin:auto;
 width: 100%;
@@ -96,14 +111,8 @@ height: 100%;
 display: flex;
 justify-content: center; /* 水平居中 */
 align-items: center;     /*垂直居中*/
-
-}
-.imageTitle{
-  vertical-align: center;
-  height: 0px;
-  line-height: 0px;
-
-  color:turquoise;
-  font-size: 40rpx;
-
+color:#00F3FD;
+font-size: 40rpx;
+font-family: "MicrosoftYaHei-Bold";
+opacity: 1;
 }

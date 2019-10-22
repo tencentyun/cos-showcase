@@ -1,47 +1,61 @@
-<view class="contanier">
 
 
-
-
- <image class="bannerImage"  src="../../static/mainBanner.png" mode="scaleToFill" bindtap="onHandleOpenMiniEvent">
- <text class="bannerTitle">
- 腾讯云开发者大会\n分会场
- </text>
- </image> 
-<text class="contentTip" style="font-size:26px">
- 存储体验中心
- </text>
- 
-
-<view class="activity">
-<image src="../../static/noticy.png" mode="scaleToFill" >
+<image class="content-bg" src="../../static/bg.png" style="width:{{windowW+'px'}};height:{{windowH+'px'}}" mode="scaleToFill">
 </image>
- <text >
-COS 专场特惠！新用户购买资源包特惠 
- </text>
-  <text style="color:#d81e06; font-size:40rpx">
- 1 
- </text>
-  <text>
-元起
- </text>
+
+
+
+<view class="contanier" >
+ 
+ <image class="bannerImage"  style="width:{{windowW*0.8+'px'}};height:{{windowW*0.8*281/620+'px'}}"src="../../static/head.svg" mode="scaleToFill">
+
+ </image> 
+
+ <view style="height:80rpx">
  </view>
- <text class="contentTip">
- 开发者大会
+<view class="contentTip" style="font-size:70rpx">
+ 存储体验中心
+ </view>
+ <view class="subTitleText">
+ STORAGE EXPERIENC
+ </view>
+ <image src="../../static/line.svg" style="height:5px" mode="scaleToFill" ></image>
+
+<image class="activity"  style="width:{{windowW-24+'px'}}" src="../../static/广告-bg.png" mode="scaleToFill">
+<view  class="activity-content">
+<image src="../../static/icon-ads.svg" mode="scaleToFill" >
+</image>
+ <text style="color:white; font-size:26rpx">
+     COS 专场特惠！新用户购买资源包特惠 1 元起
  </text>
-<view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
-  <view class="card"  wx:for='{{[titles[index], titles[index+1]]}}'>
+</view>
+
   
-  <image class='bannerImage' src="../../static/mainBanner.png" mode="scaleToFill"   data-url ="{{item.url}}" bindtap="handleClickEvent">
+ </image>
+ <view style="height:80rpx">
+ </view>
+ <view class="contentTip" style="font-size:60rpx">
+ 精选服务
+ </view>
+  <view class="subTitleText">
+ SERVICE
+ </view>
+ <view class='grids'>
+ <view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
+  <view class="card"  style="height:{{(windowW-10)/2.0*160/335+'px'}}" wx:for='{{[titles[index], titles[index+1]]}}'>
+  
+  <image  src="{{item.imageURL}}" mode="scaleToFill"   data-url ="{{item.url}}" bindtap="handleClickEvent">
 
   <view class="textView">
-  <text class="imageTitle">
+
   {{item.title}}
-  </text>
   </view>
 
   </image>
   </view>
+ </view> 
  </view>
 
+
 </view>
+
