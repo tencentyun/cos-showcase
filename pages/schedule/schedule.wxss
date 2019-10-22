@@ -95,7 +95,7 @@ page {
 .agenda_keyword {
   display: block;
   font-size: 0.9rem;
-  font-weight: 200;
+  font-weight: 300;
   padding: 10rpx;
 }
 
