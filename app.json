@@ -14,7 +14,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F1F2F7",
-    "navigationBarTitleText": "腾讯云存储照片墙",
+    "navigationBarTitleText": "存储体验中心",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
