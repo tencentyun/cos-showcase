@@ -1,4 +1,5 @@
 // pages/mian/main.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -40,8 +41,15 @@ Page({
 
   },
   openActivityPage: function (e){
-    wx.navigateTo({
-      url: "/pages/sell/sell"
+    wx.setClipboardData({
+      data:"https://cloud.tencent.com/act/pro/cos",
+      success:res=>{
+        wx.getClipboardData({
+          success:res=>{
+            util.showToast("复制成功,请用浏览器打开");
+          }
+        })
+      }
     })
   }
   
