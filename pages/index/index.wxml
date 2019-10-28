@@ -7,7 +7,7 @@
     </block>
   </swiper>
 
-  <text style="font-size:18px;line-height: 35px;margin-left:1.5%">照片墙</text>
+  <text style="font-size:18px;line-height: 35px;margin-left:1.5%">存储桶</text>
   <view  class ="emptyFileView" id ="{{ShowMainView?'hide':'showFlex'}}" style="height:{{windowH-120-windowW*0.618+'px'}}">
     <image src="../../static/empty.png" style="width:{{windowW*0.618/3*2.0+'px'}};height:{{103/180*(windowW*0.618/3*2.0)+'px'}}"></image>
     <text>点击 ➕ 按钮\n上传您的第一张照片吧~</text>

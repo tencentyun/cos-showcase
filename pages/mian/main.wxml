@@ -13,47 +13,30 @@
 
  <view style="height:80rpx">
  </view>
-<view class="contentTip" style="font-size:70rpx">
+<view class="contentTip" style="font-size:50rpx;width:{{318/750*windowW+'px'}};height:{{318/750*windowW*66/318+'px'}}">
  存储体验中心
  </view>
- <view class="subTitleText">
+ <view  style="height:{{5+'px'}}"></view>
+ <view class="subTitleText" style="font-size:20rpx;width:{{260/750*windowW+'px'}};height:{{260/750*windowW*24/260+'px'}}"> 
  STORAGE EXPERIENC
  </view>
- <image src="../../static/line.svg" style="height:5px" mode="scaleToFill" ></image>
+ <view  style="height:{{20+'px'}}"></view>
+ <image src="../../static/line.svg" style="width:{{100/750*windowW+'px'}};height:{{100/750*windowW*4/100+'px'}}" mode="scaleToFill" ></image>
 
-<image class="activity"  style="width:{{windowW-24+'px'}}" src="../../static/广告-bg.png" mode="scaleToFill" bindtap="openActivityPage">
-<view  class="activity-content">
-<image src="../../static/icon-ads.svg" mode="scaleToFill" >
-</image>
- <text style="color:white; font-size:26rpx">
-     COS 专场特惠！新用户购买资源包特惠 1 元起
- </text>
-</view>
-
-  
- </image>
- <view style="height:80rpx">
- </view>
- <view class="contentTip" style="font-size:60rpx">
- 精选服务
- </view>
-  <view class="subTitleText">
- SERVICE
- </view>
  <view class='grids'>
- <view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
-  <view class="card"  style="height:{{(windowW-10)/2.0*160/335+'px'}}" wx:for='{{[titles[index], titles[index+1]]}}'>
+  <view class='grid' wx:for='{{titles}}' wx:if='{{index%2 === 0}}'>
+    <view class="card"  style="height:{{(windowW-10)/2.0*160/335+'px'}}" wx:for='{{[titles[index], titles[index+1]]}}'>
   
-  <image  src="{{item.imageURL}}" mode="scaleToFill"   data-url ="{{item.url}}" bindtap="handleClickEvent">
+        <image  src="{{item.imageURL}}" mode="scaleToFill"   data-url ="{{item.url}}" bindtap="handleClickEvent">
 
-  <view class="textView">
+          <view class="textView">
 
-  {{item.title}}
-  </view>
+            {{item.title}}
+        </view>
 
-  </image>
-  </view>
- </view> 
+       </image>
+    </view>
+  </view> 
  </view>
 
 

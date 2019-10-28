@@ -16,6 +16,7 @@ Page({
   
     windowH: 300,
     windowW: 300,
+    scale:0
   },
 
   /**
@@ -25,9 +26,11 @@ Page({
   onLoad: function (options) {
     var that = this;
     var app = getApp();
+    var tmpScale = app.globalData.WINDOW_WIDTH / app.globalData.WINDOW_HEIGHT;
     this.setData({
       windowH: app.globalData.WINDOW_HEIGHT,
-      windowW: app.globalData.WINDOW_WIDTH
+      windowW: app.globalData.WINDOW_WIDTH,
+      scale: tmpScale
     })
 
   },

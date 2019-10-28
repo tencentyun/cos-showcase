@@ -13,7 +13,7 @@ Page({
   data: {
     banners: [
       '../../static/banner.jpg',
-      '../../static/banner1.jpg'
+     
      
     ],
     imageList: [
@@ -123,7 +123,7 @@ Page({
     var that = this;
 
     wx.showActionSheet({
-      itemList: ["盲水印", "保存", "删除"],
+      itemList: ["盲水印", "保存","获取下载链接", "删除"],
       itemColor: '#007aff',
       success(res) {
         if (res.tapIndex == 0) {
@@ -131,13 +131,30 @@ Page({
         } else if (res.tapIndex == 1) {
           that.handleSaveImage(e)
 
-        } else {
+        } else if (res.tapIndex == 2) {
+          that.hanldeGetObjectURL(e)
+
+        }else {
           that.hanldeDeleteCurrentFile(e)
         }
       }
     })
   },
-
+  hanldeGetObjectURL:function(e){
+    var index = parseInt(e.currentTarget.dataset.index)
+    var dic = this.data.imageList[index];
+    var imageURL = dic.ImgUrl;
+    wx.setClipboardData({
+      data: imageURL,
+      success: res => {
+        wx.getClipboardData({
+          success: res => {
+            util.showToast("复制成功,请用浏览器打开");
+          }
+        })
+      }
+    })
+  },
 
   handleWatermerEvent:function(e){
 
