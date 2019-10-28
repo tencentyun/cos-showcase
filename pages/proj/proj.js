@@ -1,4 +1,6 @@
 // pages/proj/proj.js
+var chat = require('../../utils/chat.js');
+
 Page({
 
   /**
@@ -44,7 +46,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    chat.quitEndlessSend()
   },
 
   /**
@@ -79,5 +81,9 @@ Page({
       current: this.data.qr_uri,
       urls: [this.data.qr_uri]
     })
+  },
+
+  sendQRCode: function () {
+    chat.sendQRCode("demo_qrCode")
   }
 })

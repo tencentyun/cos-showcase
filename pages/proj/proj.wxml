@@ -5,6 +5,9 @@
 <view class="center_item">
 <image class="qr" src="../../static/proj.png" bindtap="previewQRCode"></image>
 </view>
+<view class="chat_button" bindtap="sendQRCode">
+  <button open-type="contact">发送数字 2 获取二维码</button>
+</view>
 
 <view class="divider_container">
 <view class="line"></view>
