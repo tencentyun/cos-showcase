@@ -1,5 +1,5 @@
 <view class="content" id ="{{ShowImageDetail?'hide':'showBlock'}}" style = "height:auto;background:#F1F2F7">
-  <swiper style="height:{{windowW*0.618+'px'}}" indicator-dots="true" indicator-color="#FFFFFF" autoplay="true" interval="2000" duration="500" circular="true">
+  <swiper style="height:{{windowW*0.618+'px'}}"  indicator-color="#FFFFFF" autoplay="true" interval="2000" duration="500" circular="true">
     <block wx:for="{{banners}}" wx:key="">
       <swiper-item>
         <image class='bannerImage' style = "height:{{windowW*0.618+'px'}}" src="{{item}}" mode="aspectFill" data-index ="{{index}}"  bindtap="onHandleOpenMiniEvent"></image>

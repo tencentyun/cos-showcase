@@ -89,6 +89,8 @@ Page({
           util.showToast("上传失败", false);
         }
 
+      }).catch(err=>{
+        throw err;
       });
     })
    
