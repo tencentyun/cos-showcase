@@ -5,7 +5,7 @@
 <image class="qq" src="../../static/qq.jpg" bindtap="previewQRCode"></image>
 </view>
 <view class="chat_button" bindtap="sendQRCode">
-  <button open-type="contact">发送数字 1 获取二维码</button>
+  <button open-type="contact">进入客服会话，发送【1】即可加入群聊</button>
 </view>
 
 <view class="divider_container">

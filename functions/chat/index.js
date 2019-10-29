@@ -3,8 +3,8 @@ const cloud = require('wx-server-sdk')
 const fs = require('fs')
 
 const mediaIds = {
-  'qq_qrCode': 'NpAUhUSowAU-9zRWOsOKvchgTLHZBdsTbtmSG2vibHLNJpABNVfec9fFP3LgLZNl',
-  'demo_qrCode': 'm3Gq7g7oIfLVKzL4IvUr2OcxZrQITS7NbxDdfjf-Dpd6ckfXEh_dx75C_3GEUELn'
+  'qq_qrCode': '"pP6QsJEri5FqwmVkjsLbIYY8xugvbiZ2Ky1FDYsbUeMrhOUyj98SGuup_XENljOJ"',
+  'demo_qrCode': 'ZyVrNAyKZKRfKPknoAad5T-5u4xFaUnlLTo19VCC0Pbbw2WaB3iBjtiP7h8KIF1H'
 } 
 
 cloud.init()
