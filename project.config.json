@@ -5,7 +5,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -24,7 +24,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.3",
-	"appid": "wx8d9d92e795b2929e",
+	"appid": "wx69914d49100cb0e0",
 	"projectname": "photoWall-karis",
 	"isGameTourist": false,
 	"simulatorType": "wechat",

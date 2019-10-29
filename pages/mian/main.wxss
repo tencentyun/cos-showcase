@@ -112,5 +112,6 @@ align-items: center;     /*垂直居中*/
 color:#00F3FD;
 font-size: 32rpx;
 font-family: "MicrosoftYaHei-Bold";
+font-weight: 900;
 opacity: 1;
 }
