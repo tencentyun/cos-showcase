@@ -6,7 +6,7 @@
 <image class="qr" src="../../static/proj.png" bindtap="previewQRCode"></image>
 </view>
 <view class="chat_button" bindtap="sendQRCode">
-  <button open-type="contact">进入客服会话，发送【2】即可加入群聊</button>
+  <button open-type="contact">进入客服会话，发送【2】获取产品 demo</button>
 </view>
 
 <view class="divider_container">
