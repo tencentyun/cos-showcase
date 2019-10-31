@@ -8,7 +8,7 @@ Page({
    */
   data: {
     group: '377986805',
-    qr_uri: 'https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/miniprog/group.jpg'
+    qr_uri: 'https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/miniprog/official.jpg'
   },
 
   /**
@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '开发者交流群',
+      title: '公众号',
     })
   },
 
@@ -83,6 +83,6 @@ Page({
   },
 
   sendQRCode: function () {
-    chat.sendQRCode("qq_qrCode")
+    chat.sendQRCode("official_qrCode")
   }
 })

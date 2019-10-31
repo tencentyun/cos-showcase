@@ -5,6 +5,7 @@ function sendQRCode(mediaName) {
   if (isSending) {
     return;
   }
+  endlessSend = true;
   internalSend(mediaName)
 }
 

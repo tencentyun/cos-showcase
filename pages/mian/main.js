@@ -9,7 +9,7 @@ Page({
     titles: [
       { title: "分会场流程概览", url: "/pages/schedule/schedule", imageURL:"../../static/img1-bg.png"},
       { title: "存储产品体验", url: "/pages/index/index", imageURL: "../../static/img2-bg.png" },
-      { title: "开发者交流群", url: "/pages/discussGroup/discuss_group", imageURL: "../../static/img3-bg.png" },
+      { title: "公众号", url: "/pages/discussGroup/discuss_group", imageURL: "../../static/img3-bg.png" },
       { title: "产品demo", url: "/pages/proj/proj", imageURL: "../../static/img4-bg.png" }
     
     ],

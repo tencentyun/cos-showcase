@@ -3,6 +3,6 @@
 @import '../proj/proj.wxss';
 
 .qq {
-  width: 540rpx;
-  height: 740rpx;
+  width: 606rpx;
+  height: 659rpx;
 }
