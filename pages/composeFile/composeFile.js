@@ -134,7 +134,7 @@ Page({
     //合成之后和源文件同名，覆盖原文件
     var pathname = '/'+oringeFilekey;
     var saveKey = oringeFilekey.substr(oringeFilekey.lastIndexOf('/')+1);
-    var operations = `{"rules":[{"fileid":"${saveKey}","rule":"watermark/3/type/2/image/${Base64.encode(watermarkUrl)}"}]}`
+    var operations = `{"rules":[{"fileid":"${saveKey}","rule":"imageMogr2/lquality/90|watermark/3/type/2/image/${Base64.encode(watermarkUrl)}"}]}`
     var url = config.CiV5Host + '/' + oringeFilekey + '?image_process';
     header['Pic-Operations'] = operations;
     header['content-type'] ='image/png';
@@ -178,7 +178,7 @@ Page({
     this.fetchWatermerResult(rule,function (res){
       var watermarkStatus = util.parseExtractBlindWatermarkResponse(res.data).ProcessResults.WatermarkStatus;
       //认为有盲水印
-      if (watermarkStatus > 80) {
+      if (watermarkStatus > 70) {
         util.showToast("提取成功", true);
         var result = 'https://' + util.parseExtractBlindWatermarkResponse(res.data).ProcessResults.Location;
         that.setData({
