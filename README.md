@@ -1,3 +1,3 @@
 # cos-showcase
 
-COS 功能展示小程序
+腾讯云对象存储 COS 功能展示小程序
